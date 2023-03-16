@@ -118,6 +118,45 @@ h5 {
 }
 /* Container END */
 
+/* Buttons START */
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button_primary {
+  border: none;
+  padding: 15px 45px;
+  background-color: var(--color-primary);
+}
+
+.button_secondary {
+  padding: 14px 43px;
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+}
+
+@media (hover: hover) {
+  .button_primary:hover,
+  .button_secondary:hover {
+    background-color: var(--color-primary-light);
+  }
+
+  .button_secondary:hover {
+    background-color: var(--color-primary-light);
+    border-color: var(--color-primary-light);
+  }
+}
+
+/* Buttons END */
+
 /* Header START */
 .header {
   position: absolute;
