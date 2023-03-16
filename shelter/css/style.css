@@ -143,13 +143,37 @@ h5 {
   border: 2px solid var(--color-primary);
 }
 
+.button_arrow {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  padding: 22px 18px;
+}
+
+.button_arrow:disabled {
+  border-color: var(--color-dark-s);
+  cursor: not-allowed;
+}
+
+.button_arrow:disabled svg path {
+  fill: var(--color-dark-s);
+}
+
+.button_close {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  padding: 20px;
+}
+
 @media (hover: hover) {
-  .button_primary:hover,
-  .button_secondary:hover {
+  .button_primary:not(:disabled):hover,
+  .button_secondary:not(:disabled):hover,
+  .button_close:not(:disabled):hover {
     background-color: var(--color-primary-light);
   }
 
-  .button_secondary:hover {
+  .button_secondary:not(:disabled):hover,
+  .button_arrow:not(:disabled):hover,
+  .button_close:not(:disabled):hover {
     background-color: var(--color-primary-light);
     border-color: var(--color-primary-light);
   }
