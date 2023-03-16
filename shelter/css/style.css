@@ -1,3 +1,44 @@
+@font-face {
+  font-family: 'Georgia';
+  src: url('../assets/fonts/Georgia.woff2') format('woff2'),
+    url('../assets/fonts/Georgia.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url('../assets/fonts/Georgia-Bold.woff2') format('woff2'),
+    url('../assets/fonts/Georgia-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: url('../assets/fonts/ArialMT.woff2') format('woff2'),
+    url('../assets/fonts/ArialMT.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: url('../assets/fonts/Arial-ItalicMT.woff2') format('woff2'),
+    url('../assets/fonts/Arial-ItalicMT.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --font-family--georgia: 'Georgia', serif;
+  --font-family--arial: 'Arial', sans-serif;
+}
+
 *,
 *:before,
 *:after {
@@ -6,4 +47,8 @@
 
 html {
   font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family--georgia);
 }
