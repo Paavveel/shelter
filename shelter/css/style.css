@@ -37,6 +37,22 @@
 :root {
   --font-family--georgia: 'Georgia', serif;
   --font-family--arial: 'Arial', sans-serif;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-primary: #f1cdb3;
+  --color-primary-light: #fddcc4;
+  --color-dark-3xl: #292929;
+  --color-dark-2xl: #444444;
+  --color-dark-xl: #4c4c4c;
+  --color-dark-l: #545454;
+  --color-dark-m: #b2b2b2;
+  --color-dark-s: #cdcdcd;
+  --color-light-l: #f6f6f6;
+  --color-light-s: #fafafa;
+
+  --viewport--xs: 320px;
+  --viewport--md: 768px;
+  --viewport--lg: 1280px;
 }
 
 *,
@@ -45,10 +61,21 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
 html {
   font-size: 16px;
 }
 
 body {
   font-family: var(--font-family--georgia);
+  color: var(--color-dark-l);
+  font-weight: 400;
 }
