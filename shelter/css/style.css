@@ -80,6 +80,36 @@ body {
   font-weight: 400;
 }
 
+/* Heading START */
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-family--georgia);
+  color: var(--color-dark-l);
+  font-weight: 400;
+}
+h2 {
+  font-size: 44px;
+  line-height: 57px;
+}
+h3 {
+  font-size: 35px;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+}
+h4 {
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+}
+h5 {
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+}
+/* Heading END */
+
 /* Container START */
 .container {
   max-width: var(--viewport--lg);
