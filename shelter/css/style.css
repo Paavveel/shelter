@@ -120,8 +120,10 @@ h5 {
 
 /* Buttons START */
 .button {
+  color: var(--color-dark-3xl);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   font-size: 17px;
   line-height: 22px;
@@ -144,9 +146,10 @@ h5 {
 }
 
 .button_arrow {
+  width: 52px;
+  height: 52px;
   background-color: transparent;
   border: 2px solid var(--color-primary);
-  padding: 22px 18px;
 }
 
 .button_arrow:disabled {
@@ -159,23 +162,55 @@ h5 {
 }
 
 .button_close {
+  width: 52px;
+  height: 52px;
   background-color: transparent;
   border: 2px solid var(--color-primary);
-  padding: 20px;
+}
+
+.button_paginator {
+  width: 52px;
+  height: 52px;
+  font-size: 20px;
+  line-height: 23px;
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+}
+
+.button_paginator:disabled {
+  color: var(--color-dark-s);
+  border-color: var(--color-dark-s);
+  cursor: not-allowed;
+}
+
+.button_paginator:disabled svg path {
+  fill: var(--color-dark-s);
+}
+
+.button_paginator_active {
+  background-color: var(--color-primary);
+}
+
+.button_paginator_left svg {
+  transform: rotate(180deg);
 }
 
 @media (hover: hover) {
-  .button_primary:not(:disabled):hover,
-  .button_secondary:not(:disabled):hover,
-  .button_close:not(:disabled):hover {
+  .button_primary:not(:disabled):hover {
     background-color: var(--color-primary-light);
   }
 
   .button_secondary:not(:disabled):hover,
   .button_arrow:not(:disabled):hover,
-  .button_close:not(:disabled):hover {
+  .button_close:not(:disabled):hover,
+  .button_paginator:not(:disabled):hover {
     background-color: var(--color-primary-light);
     border-color: var(--color-primary-light);
+  }
+
+  .button_paginator_active:not(:disabled):hover {
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
   }
 }
 
@@ -183,7 +218,7 @@ h5 {
 
 /* Header START */
 .header {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
 }
 
