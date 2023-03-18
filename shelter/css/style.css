@@ -352,16 +352,15 @@ h5 {
 
 /* Not-only START */
 .not-only {
-  height: 908px;
-  padding-top: 120px;
+  padding-top: 180px;
   background: url('../assets/images/noise_transparent@2x.png'),
     radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
 }
 
 .not-only__wrapper {
-  height: 100%;
   display: grid;
-  grid-template-columns: 460px auto;
+  grid-template-columns: minmax(100px, 460px) minmax(100px, 698px);
+  align-items: center;
   gap: 42px;
 }
 
@@ -370,11 +369,11 @@ h5 {
   flex-direction: column;
   align-items: flex-start;
   gap: 42px;
-  margin-top: 223px;
+  padding-bottom: 80px;
 }
 
 .not-only__title {
-  width: 310px;
+  max-width: 310px;
   color: var(--color-white);
   margin: 0;
 }
