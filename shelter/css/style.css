@@ -388,3 +388,36 @@ h5 {
   align-self: end;
 }
 /* Not-only END */
+
+/* About START */
+.about {
+  padding: 80px 0 100px;
+}
+
+.about__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+}
+
+.about__img {
+  max-width: 23.5vw;
+}
+
+.about__right-side {
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.about__title {
+  max-width: 370px;
+  margin: 0;
+}
+
+.about__text {
+  margin: 0;
+}
+/* About END */
