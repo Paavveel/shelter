@@ -187,6 +187,10 @@ h5 {
   border: 2px solid var(--color-primary);
 }
 
+.button_arrow_right svg {
+  transform: rotate(180deg);
+}
+
 .button_arrow:disabled {
   border-color: var(--color-dark-s);
   cursor: not-allowed;
@@ -420,3 +424,48 @@ h5 {
   margin: 0;
 }
 /* About END */
+
+/* Our friends START */
+.our-friends {
+  background-color: var(--color-light-l);
+  padding: 80px 0 100px;
+}
+
+.our-friends__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our-friends__title {
+  max-width: 400px;
+  margin: 0;
+  text-align: center;
+  margin-left: 2px;
+}
+
+.our-friends__slider {
+  position: relative;
+  width: 100%;
+  padding: 60px 0;
+}
+
+.our-friends__pet-card {
+  width: 270px;
+  height: 435px;
+}
+
+.our-friends__slider-button-prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.our-friends__slider-button-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+/* Our friends END */
