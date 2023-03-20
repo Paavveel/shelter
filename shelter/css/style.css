@@ -509,3 +509,23 @@ h5 {
   }
 }
 /* Pet card END */
+
+.main-pets-page-section {
+  padding-top: 120px;
+}
+
+/* Our friends pets page START */
+.our-friends-pets__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 270px);
+  align-items: center;
+  width: 100%;
+  gap: 30px 40px;
+  padding: 60px 0;
+}
+
+.our-friends-pets__pagination {
+  display: flex;
+  gap: 20px;
+}
+/* Our friends pets page END */
