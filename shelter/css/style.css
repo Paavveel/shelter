@@ -175,7 +175,7 @@ h5 {
 }
 
 .button_secondary {
-  padding: 14px 43px;
+  padding: 13px 42.5px;
   background-color: transparent;
   border: 2px solid var(--color-primary);
 }
@@ -450,11 +450,6 @@ h5 {
   padding: 60px 0;
 }
 
-.our-friends__pet-card {
-  width: 270px;
-  height: 435px;
-}
-
 .our-friends__slider-button-prev {
   position: absolute;
   top: 50%;
@@ -468,4 +463,49 @@ h5 {
   right: 0;
   transform: translateY(-50%);
 }
+
+.our-friends__slider-container {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+}
+
 /* Our friends END */
+
+/* Pet card START */
+.pet-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 270px;
+  height: 435px;
+  background-color: var(--color-light-s);
+  border-radius: 9px;
+  transition: all 0.3s;
+}
+
+.pet-card__img {
+  border-radius: 9px 9px 0px 0px;
+}
+
+.pet-card__name {
+  color: var(--color-dark-l);
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  margin: 30px 0;
+}
+
+@media (hover: hover) {
+  .pet-card:hover {
+    background-color: var(--color-white);
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    cursor: pointer;
+  }
+
+  .pet-card:hover .button {
+    background-color: var(--color-primary-light);
+    border-color: var(--color-primary-light);
+  }
+}
+/* Pet card END */
