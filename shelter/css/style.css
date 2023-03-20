@@ -264,7 +264,7 @@ h5 {
 .header__wrapper {
   display: flex;
   justify-content: space-between;
-  padding-top: 60px;
+  padding-top: 30px;
 }
 
 .header__title h1 {
