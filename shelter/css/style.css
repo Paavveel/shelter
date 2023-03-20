@@ -518,7 +518,7 @@ h5 {
 .our-friends-pets__container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 270px);
-  align-items: center;
+  justify-content: center;
   width: 100%;
   gap: 30px 40px;
   padding: 60px 0;
