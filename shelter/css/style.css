@@ -529,3 +529,45 @@ h5 {
   gap: 20px;
 }
 /* Our friends pets page END */
+
+/* Help page START */
+.help {
+  padding: 80px 0 100px;
+}
+
+.help__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.help__title {
+  max-width: 315px;
+  margin: 0;
+  text-align: center;
+  padding-left: 2px;
+  padding-top: 1px;
+}
+
+.help__content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 120px;
+  row-gap: 55px;
+}
+
+.help__item {
+  height: 113px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.help__icon-text {
+  margin: 0;
+}
+/* Help END */
