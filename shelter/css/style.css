@@ -137,16 +137,17 @@ h5 {
 .paragraph-l,
 .paragraph-s {
   font-family: var(--font-family--arial);
-  color: var(--color-dark-xl);
   font-weight: 400;
 }
 
 .paragraph-l {
+  color: var(--color-dark-xl);
   font-size: 15px;
   line-height: 24px;
 }
 
 .paragraph-s {
+  color: var(--color-dark-m);
   font-style: italic;
   font-size: 12px;
   line-height: 18px;
@@ -571,3 +572,59 @@ h5 {
   margin: 0;
 }
 /* Help END */
+
+/* About START */
+.in-addition {
+  background-color: var(--color-light-l);
+  padding: 80px 0 100px;
+}
+
+.in-addition__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.in-addition__img {
+  max-width: 40vw;
+}
+
+.in-addition__right-side {
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  flex-shrink: 1;
+}
+
+.in-addition__title {
+  max-width: 300px;
+  margin: 0;
+}
+
+.in-addition__subtitle {
+  /* max-width: 300px; */
+  margin: 0;
+}
+
+.in-addition__link {
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  color: var(--color-dark-l);
+  border-radius: 9px;
+  padding: 10px 15px;
+}
+
+.in-addition__link-text {
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.in-addition__text {
+  margin: 0;
+}
+/* About END */
