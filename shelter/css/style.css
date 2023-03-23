@@ -230,6 +230,7 @@ h5 {
 
 .button_paginator_active {
   background-color: var(--color-primary);
+  pointer-events: none;
 }
 
 .button_paginator_left svg {
