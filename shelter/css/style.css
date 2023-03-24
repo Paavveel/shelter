@@ -313,6 +313,7 @@ h5 {
 
 .header__menu-item_active .header__menu-link {
   color: var(--color-light-s);
+  pointer-events: none;
 }
 
 .header__menu-link {
@@ -321,10 +322,6 @@ h5 {
   font-size: 15px;
   line-height: 24px;
   transition: all 0.3s;
-}
-
-.header__menu-link:not([href]) {
-  cursor: default;
 }
 
 @media (hover: hover) {
