@@ -270,7 +270,7 @@ h5 {
   padding-top: 30px;
 }
 
-.header__title h1 {
+.header__title {
   color: var(--color-primary);
   font-size: 32px;
   font-weight: 400;
@@ -339,7 +339,7 @@ h5 {
   padding-top: 30px;
 }
 
-.header_theme_white .header__title h1 {
+.header_theme_white .header__title {
   color: var(--color-dark-l);
 }
 
