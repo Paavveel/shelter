@@ -285,6 +285,12 @@ h5 {
   padding-top: 30px;
 }
 
+.header__logo,
+.header__title,
+.header__subtitle {
+  transition: all 0.3s;
+}
+
 .header__title {
   color: var(--color-primary);
   font-size: 32px;
@@ -342,13 +348,42 @@ h5 {
   border-bottom: 3px solid var(--color-primary);
 }
 
+.header__logo:active .header__title {
+  color: var(--color-primary);
+}
+
+.header__logo:active .header__subtitle {
+  color: var(--color-primary);
+}
+
 @media (hover: hover) {
+  .header__logo:hover .header__title {
+    color: var(--color-primary-light);
+  }
+
+  .header__logo:hover .header__subtitle {
+    color: var(--color-primary-light);
+  }
+
+  .header__logo:hover:active .header__title {
+    color: var(--color-primary);
+  }
+
+  .header__logo:hover:active .header__subtitle {
+    color: var(--color-primary);
+  }
+
   .header__menu-link:hover {
     color: var(--color-light-s);
   }
 
   .header_theme_white .header__menu-link:hover {
     color: var(--color-dark-3xl);
+  }
+
+  .header_theme_white .header__logo:hover:active .header__title,
+  .header_theme_white .header__logo:hover:active .header__subtitle {
+    color: var(--color-primary);
   }
 }
 
