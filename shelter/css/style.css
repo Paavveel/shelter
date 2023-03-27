@@ -237,9 +237,21 @@ h5 {
   transform: rotate(180deg);
 }
 
+.button_secondary:not(:disabled):active,
+.button_arrow:not(:disabled):active,
+.button_close:not(:disabled):active,
+.button_paginator:not(:disabled):active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
 @media (hover: hover) {
   .button_primary:not(:disabled):hover {
     background-color: var(--color-primary-light);
+  }
+
+  .button_primary:not(:disabled):hover:active {
+    background-color: var(--color-primary);
   }
 
   .button_secondary:not(:disabled):hover,
@@ -250,9 +262,12 @@ h5 {
     border-color: var(--color-primary-light);
   }
 
-  .button_paginator_active:not(:disabled):hover {
+  .button_secondary:not(:disabled):hover:active,
+  .button_arrow:not(:disabled):hover:active,
+  .button_close:not(:disabled):hover:active,
+  .button_paginator:not(:disabled):hover:active {
     background-color: var(--color-primary);
-    border: 2px solid var(--color-primary);
+    border-color: var(--color-primary);
   }
 }
 
@@ -507,6 +522,16 @@ h5 {
   margin: 30px 0;
 }
 
+.pet-card:active {
+  background-color: var(--color-white);
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.pet-card:active .button {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary-light);
+}
+
 @media (hover: hover) {
   .pet-card:hover {
     background-color: var(--color-white);
@@ -517,6 +542,11 @@ h5 {
   .pet-card:hover .button {
     background-color: var(--color-primary-light);
     border-color: var(--color-primary-light);
+  }
+
+  .pet-card:hover:active .button {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
   }
 }
 /* Pet card END */
@@ -714,6 +744,14 @@ h5 {
 
   .footer__link:hover svg path {
     fill: var(--color-primary-light);
+  }
+
+  .footer__link:hover:active h4 {
+    color: var(--color-primary);
+  }
+
+  .footer__link:hover:active svg path {
+    fill: var(--color-primary);
   }
 }
 /* Footer END */
