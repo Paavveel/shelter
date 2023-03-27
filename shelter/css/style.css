@@ -307,21 +307,24 @@ h5 {
   margin: 0;
 }
 
-.header__menu-item_active {
-  border-bottom: 3px solid var(--color-primary);
-}
-
-.header__menu-item_active .header__menu-link {
-  color: var(--color-light-s);
-  pointer-events: none;
-}
-
 .header__menu-link {
+  display: block;
   font-family: var(--font-family--arial);
   color: var(--color-dark-s);
   font-size: 15px;
   line-height: 24px;
-  transition: all 0.3s;
+  transition: color 0.3s, border 0s;
+}
+
+.header__menu-link_active {
+  color: var(--color-light-s);
+  border-bottom: 3px solid var(--color-primary);
+  pointer-events: none;
+}
+
+.header__menu-link:active {
+  color: var(--color-light-s);
+  border-bottom: 3px solid var(--color-primary);
 }
 
 @media (hover: hover) {
@@ -351,7 +354,11 @@ h5 {
   color: var(--color-dark-l);
 }
 
-.header_theme_white .header__menu-item_active .header__menu-link {
+.header_theme_white .header__menu-link:active {
+  color: var(--color-dark-3xl);
+}
+
+.header_theme_white .header__menu-link_active {
   color: var(--color-dark-3xl);
 }
 /* Header PETS END */
