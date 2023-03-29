@@ -578,11 +578,6 @@ h5 {
     background-color: var(--color-primary-light);
     border-color: var(--color-primary-light);
   }
-
-  .pet-card:hover:active .button {
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
-  }
 }
 /* Pet card END */
 
