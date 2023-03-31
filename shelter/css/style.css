@@ -139,7 +139,7 @@ h5 {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 435px) {
   .container {
     padding: 0 10px;
   }
@@ -890,6 +890,80 @@ h5 {
 .help__icon-text {
   margin: 0;
 }
+
+@media (max-width: 1108px) {
+  .help__content {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 900px) {
+  .help__content {
+    column-gap: 60px;
+  }
+
+  .help__item {
+    width: 170px;
+  }
+}
+
+@media (max-width: 768px) {
+  .help__content {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 690px) {
+  .help__content {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 500px) {
+  .help__content {
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+
+  .help__item {
+    height: 87px;
+    width: 130px;
+  }
+
+  .help__icon-text {
+    font-size: 15px;
+    line-height: 17px;
+  }
+
+  .help__icon {
+    height: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  .help {
+    padding: 42px 0;
+  }
+
+  .help__title {
+    max-width: 222px;
+    font-size: 25px;
+    line-height: 32px;
+    padding-left: 0;
+  }
+
+  .help__wrapper {
+    gap: 42px;
+  }
+}
+
+@media (max-width: 320px) {
+  .help__content {
+    justify-content: unset;
+    padding: 0 5px;
+  }
+}
+
 /* Help END */
 
 /* About START */
