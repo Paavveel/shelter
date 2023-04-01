@@ -895,15 +895,14 @@ h5 {
   .help__content {
     justify-content: space-around;
   }
+  .help__item {
+    width: 170px;
+  }
 }
 
 @media (max-width: 900px) {
   .help__content {
     column-gap: 60px;
-  }
-
-  .help__item {
-    width: 170px;
   }
 }
 
