@@ -491,8 +491,7 @@ h5 {
     flex-direction: column;
     align-items: center;
     gap: 0;
-    margin: 0 auto;
-    margin-top: 248px;
+    margin: auto;
   }
 
   .menu__item:nth-child(2) {
