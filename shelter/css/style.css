@@ -508,6 +508,10 @@ h5 {
     font-size: 32px;
     line-height: 51px;
   }
+
+  .menu__link_active {
+    pointer-events: auto;
+  }
 }
 
 /* Header PETS START */

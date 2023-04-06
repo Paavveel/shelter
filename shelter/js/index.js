@@ -18,14 +18,18 @@ if (menuBody && menuButton) {
   });
 
   menuBody.addEventListener('click', (e) => {
-    if (
-      e.target.matches('.menu__link') &&
-      menuBody.matches('.menu__body_show')
-    ) {
+    const link = e.target;
+
+    if (link.matches('.menu__link') && menuBody.matches('.menu__body_show')) {
       e.preventDefault();
 
-      const link = e.target;
       const href = link.getAttribute('href');
+
+      if (href === '#' || link.matches('.menu__link_active')) {
+        closeMenu();
+        location.hash = '';
+        return;
+      }
 
       closeMenu();
 
