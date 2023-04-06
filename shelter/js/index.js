@@ -1,3 +1,4 @@
+import pets from '../data/pets.json' assert { type: 'json' };
 const menuOverlay = document.querySelector('.menu__overlay');
 const menuBody = document.querySelector('.menu__body');
 const menuButton = document.querySelector('.menu__button');
