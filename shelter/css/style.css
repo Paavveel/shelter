@@ -753,67 +753,110 @@ h5 {
 }
 
 .our-friends__slider {
-  position: relative;
   padding: 60px 0;
+}
+
+.slider {
+  position: relative;
 }
 
 .our-friends__slider .pet-card {
   flex-shrink: 0;
 }
 
-.our-friends__slider-button-prev {
+.slider__button-left {
   position: absolute;
   top: 50%;
   left: -105px;
   transform: translateY(-50%);
 }
 
-.our-friends__slider-button-next {
+.slider__button-right {
   position: absolute;
   top: 50%;
   right: -105px;
   transform: translateY(-50%);
 }
 
-.our-friends__slider-container {
+.slider__wrapper {
+  position: relative;
+  width: 990px;
+  overflow: hidden;
+}
+
+.slider__inner {
+  position: relative;
+  display: flex;
+  left: -990px;
+}
+
+.slider__item {
   display: flex;
   justify-content: center;
   gap: 90px;
 }
 
+@keyframes move-left {
+  form {
+    left: -990px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.slider__inner_transition-left {
+  /* animation: move-right 1s timing-function delay iteration-count direction fill-mode; */
+  animation: move-left 1s;
+}
+
+@keyframes move-right {
+  form {
+    left: -990px;
+  }
+  to {
+    left: -1980px;
+  }
+}
+
+.slider__inner_transition-right {
+  /* animation: move-right 1s timing-function delay iteration-count direction fill-mode; */
+  animation: move-right 1s;
+}
+
 @media (max-width: 1240px) {
-  .our-friends__slider-container {
+  .slider__item {
     gap: 40px;
   }
 }
 
 @media (max-width: 1140px) {
-  .our-friends__slider-container {
+  .slider__item {
     gap: 90px;
   }
-  .our-friends__slider .pet-card:last-child {
+  /* .our-friends__slider .pet-card:last-child {
     display: none;
-  }
+  } */
 }
 
 @media (max-width: 900px) {
-  .our-friends__slider-container {
+  .slider__item {
     gap: 40px;
   }
 
-  .our-friends__slider-button-prev {
+  .slider__button-left {
     left: -64px;
   }
 
-  .our-friends__slider-button-next {
+  .slider__button-right {
     right: -64px;
   }
 }
 
 @media (max-width: 767px) {
-  .our-friends__slider .pet-card:nth-child(2) {
+  /* .our-friends__slider .pet-card:nth-child(2) {
     display: none;
-  }
+  } */
 }
 
 @media (max-width: 435px) {
@@ -830,13 +873,13 @@ h5 {
     line-height: 32px;
   }
 
-  .our-friends__slider-button-prev {
+  .slider__button-left {
     left: 43px;
     top: unset;
     bottom: 17px;
   }
 
-  .our-friends__slider-button-next {
+  .slider__button-right {
     right: 43px;
     top: unset;
     bottom: 17px;
