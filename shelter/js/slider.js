@@ -6,6 +6,41 @@ const sliderItemLeft = document.querySelector('.slider__item-left');
 const sliderItemActive = document.querySelector('.slider__item-active');
 const sliderItemRight = document.querySelector('.slider__item-right');
 
+let petsCount;
+
+const mobileWidthMediaQuery = window.matchMedia('(max-width: 767px)');
+const tabletWidthMediaQuery = window.matchMedia('(max-width: 1240px)');
+
+switch (true) {
+  case mobileWidthMediaQuery.matches:
+    petsCount = 1;
+    break;
+  case tabletWidthMediaQuery.matches:
+    petsCount = 2;
+    break;
+  default:
+    petsCount = 3;
+    break;
+}
+
+mobileWidthMediaQuery.addEventListener('change', (e) => {
+  if (e.matches) {
+    petsCount = 1;
+  } else {
+    petsCount = 2;
+  }
+  renderSlider();
+});
+
+tabletWidthMediaQuery.addEventListener('change', (e) => {
+  if (e.matches) {
+    petsCount = 2;
+  } else {
+    petsCount = 3;
+  }
+  renderSlider();
+});
+
 let pastArr = [];
 let currArr = [];
 let nextArr = [];
@@ -69,14 +104,17 @@ function renderPets(arr, container) {
   container.innerHTML = '';
   let pets = '';
 
-  arr.forEach(({ name, img }) => {
+  const tabIndex = container.matches('.slider__item-active') ? 0 : -1;
+
+  for (let i = 0; i < petsCount; i++) {
+    const { name, img } = arr[i];
     pets += `<div class="pet-card">
                   <img class="pet-card__img" width="270" height="270" src="${img}"
                     alt="Katrine">
                   <p class="pet-card__name">${name}</p>
-                  <button class="button button_secondary">Learn more</button>
+                  <button class="button button_secondary" tabindex="${tabIndex}">Learn more</button>
                 </div>`;
-  });
+  }
 
   container.insertAdjacentHTML('afterbegin', pets);
 }
