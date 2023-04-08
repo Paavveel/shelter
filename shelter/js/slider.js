@@ -110,7 +110,7 @@ function renderPets(arr, container) {
     const { name, img } = arr[i];
     pets += `<div class="pet-card">
                   <img class="pet-card__img" width="270" height="270" src="${img}"
-                    alt="Katrine">
+                    alt="${name}">
                   <p class="pet-card__name">${name}</p>
                   <button class="button button_secondary" tabindex="${tabIndex}">Learn more</button>
                 </div>`;
