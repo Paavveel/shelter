@@ -9,7 +9,10 @@ const sliderItemRight = document.querySelector('.slider__item-right');
 let petsCount;
 
 const mobileWidthMediaQuery = window.matchMedia('(max-width: 767px)');
-const tabletWidthMediaQuery = window.matchMedia('(max-width: 1240px)');
+const tabletWidthMediaQuery = window.matchMedia(
+  '(min-width: 768px) and (max-width: 1240px)'
+);
+const desktopWidthMediaQuery = window.matchMedia('(min-width: 1240px)');
 
 switch (true) {
   case mobileWidthMediaQuery.matches:
@@ -18,16 +21,16 @@ switch (true) {
   case tabletWidthMediaQuery.matches:
     petsCount = 2;
     break;
-  default:
+  case desktopWidthMediaQuery.matches:
     petsCount = 3;
+    break;
+  default:
     break;
 }
 
 mobileWidthMediaQuery.addEventListener('change', (e) => {
   if (e.matches) {
     petsCount = 1;
-  } else {
-    petsCount = 2;
   }
   renderSlider();
 });
@@ -35,7 +38,12 @@ mobileWidthMediaQuery.addEventListener('change', (e) => {
 tabletWidthMediaQuery.addEventListener('change', (e) => {
   if (e.matches) {
     petsCount = 2;
-  } else {
+  }
+  renderSlider();
+});
+
+desktopWidthMediaQuery.addEventListener('change', (e) => {
+  if (e.matches) {
     petsCount = 3;
   }
   renderSlider();
