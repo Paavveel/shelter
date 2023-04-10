@@ -22,25 +22,22 @@
         <p class="header__subtitle">Shelter for pets in Boston</p>
       </a>
 
-      <button class="header__menu-btn-open">
-        <svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line y1="21" x2="30" y2="21" stroke="#F1CDB3" stroke-width="2" />
-          <line y1="11" x2="30" y2="11" stroke="#F1CDB3" stroke-width="2" />
-          <line y1="1" x2="30" y2="1" stroke="#F1CDB3" stroke-width="2" />
-        </svg>
-      </button>
-
-      <div class="header__navigation">
-        <button class="header__menu-btn-close"></button>
-        <nav class="header__menu">
-          <ul class="header__menu-list">
-            <li class="header__menu-item"><a class="header__menu-link header__menu-link_active" href="#">About
+      <div class="header__menu menu">
+        <button class="menu__button">
+          <div class="menu__button-icon">
+            <span class="menu__button-icon-line"></span>
+          </div>
+        </button>
+        <nav class="menu__body">
+          <ul class="menu__list">
+            <li class="menu__item"><a class="menu__link menu__link_active" href="#">About
                 the shelter</a></li>
-            <li class="header__menu-item"><a class="header__menu-link" href="pets.html">Our pets</a></li>
-            <li class="header__menu-item"><a class="header__menu-link" href="#help">Help the shelter</a></li>
-            <li class="header__menu-item"><a class="header__menu-link" href="#footer">Contacts</a></li>
+            <li class="menu__item"><a class="menu__link" href="pets.html">Our pets</a></li>
+            <li class="menu__item"><a class="menu__link" href="#help">Help the shelter</a></li>
+            <li class="menu__item"><a class="menu__link" href="#footer">Contacts</a></li>
           </ul>
         </nav>
+        <div class="overlay menu__overlay"></div>
       </div>
 
     </div>
@@ -91,38 +88,26 @@
         <h3 class="our-friends__title">Our friends who
           are&nbsp;looking for a house</h3>
 
-        <div class="our-friends__slider">
+        <div class="our-friends__slider slider">
 
-          <div class="our-friends__slider-container">
+          <button class="button button_arrow slider__button-left">
+            <svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="#292929" />
+            </svg>
+          </button>
+          <button class="button button_arrow button_arrow_right slider__button-right">
+            <svg width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="#292929" />
+            </svg>
+          </button>
 
-            <div class="pet-card">
-              <img class="pet-card__img" width="270" height="270" src="assets/images/pets/katrine.png" alt="Katrine">
-              <p class="pet-card__name">Katrine</p>
-              <button class="button button_secondary">Learn more</button>
+          <div class="slider__wrapper">
+            <div class="slider__inner" id="modal-content">
+              <div class="slider__item slider__item-left"></div>
+              <div class="slider__item slider__item-active"></div>
+              <div class="slider__item slider__item-right"></div>
             </div>
-
-            <div class="pet-card">
-              <img class="pet-card__img" width="270" height="270" src="assets/images/pets/jennifer.png" alt="Jennifer">
-              <p class="pet-card__name">Jennifer</p>
-              <button class="button button_secondary">Learn more</button>
-            </div>
-
-            <div class="pet-card">
-              <img class="pet-card__img" width="270" height="270" src="assets/images/pets/woody.png" alt="Woody">
-              <p class="pet-card__name">Woody</p>
-              <button class="button button_secondary">Learn more</button>
-            </div>
-
           </div>
-
-          <button class="button button_arrow our-friends__slider-button-prev"><svg width="14" height="6"
-              viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="#292929" />
-            </svg></button>
-          <button class="button button_arrow button_arrow_right our-friends__slider-button-next"><svg width="14"
-              height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="#292929" />
-            </svg></button>
 
         </div>
 
@@ -262,8 +247,19 @@
       <img class="footer__img" width="300" height="310" src="assets/images/footer-puppy.png" alt="Footer puppy">
     </div>
   </footer>
+  <div class="overlay modal">
+    <div class="modal__body">
+      <button class="button button_close modal__button-close">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M7.42618 6.00003L11.7046 1.72158C12.0985 1.32775 12.0985 0.689213 11.7046 0.295433C11.3108 -0.0984027 10.6723 -0.0984027 10.2785 0.295433L5.99998 4.57394L1.72148 0.295377C1.32765 -0.098459 0.68917 -0.098459 0.295334 0.295377C-0.0984448 0.689213 -0.0984448 1.32775 0.295334 1.72153L4.57383 5.99997L0.295334 10.2785C-0.0984448 10.6723 -0.0984448 11.3108 0.295334 11.7046C0.68917 12.0985 1.32765 12.0985 1.72148 11.7046L5.99998 7.42612L10.2785 11.7046C10.6723 12.0985 11.3108 12.0985 11.7046 11.7046C12.0985 11.3108 12.0985 10.6723 11.7046 10.2785L7.42618 6.00003Z"
+            fill="#292929" />
+        </svg>
+      </button>
+    </div>
+  </div>
 
-  <script src="js/index.js"></script>
+  <script src="./main.js" type="module"></script>
 </body>
 
 </html>
