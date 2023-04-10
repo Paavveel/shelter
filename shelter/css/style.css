@@ -1383,3 +1383,151 @@ h5 {
   }
 }
 /* Footer END */
+
+/* Modal START */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0s;
+}
+
+.modal__body {
+  position: relative;
+  display: flex;
+  column-gap: 29px;
+  width: 900px;
+  background: var(--color-light-s);
+  border-radius: 9px;
+  margin: 54px;
+  outline: none;
+}
+
+.modal__img {
+  border-radius: 9px 0px 0px 9px;
+}
+
+.modal__info {
+  display: flex;
+  flex-direction: column;
+  max-width: 351px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.modal__title,
+.modal__subtitle,
+.modal__description,
+.modal__list-item-title,
+.modal__list-item-text {
+  color: var(--color-black);
+  margin: 0;
+}
+
+.modal__title {
+  margin-bottom: 10px;
+}
+
+.modal__list-item-title,
+.modal__list-item-text {
+  display: inline-block;
+}
+
+.modal__subtitle {
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.modal__description {
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+  margin: 40px 0;
+}
+
+.modal__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding-left: 14px;
+}
+
+.modal__list li::marker {
+  color: var(--color-primary);
+}
+
+.modal__list-item-title {
+  font-weight: 700;
+}
+
+.modal__button-close {
+  position: absolute;
+  top: -51px;
+  right: -42px;
+}
+
+@media (max-width: 1050px) {
+  .modal__body {
+    column-gap: 11px;
+    width: 630px;
+    margin: 54px;
+  }
+
+  .modal__info {
+    max-width: 261px;
+    margin-top: 10px;
+  }
+
+  .modal__img {
+    width: 350px;
+  }
+
+  .modal__list {
+    gap: 4px;
+  }
+
+  .modal__description {
+    font-size: 13px;
+    line-height: 14.3px;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal__body {
+    column-gap: 11px;
+    width: 240px;
+    margin: 10px;
+  }
+
+  .modal__info {
+    max-width: 261px;
+    margin-top: 0;
+    padding: 10px;
+  }
+
+  .modal__img {
+    display: none;
+  }
+
+  .modal__subtitle,
+  .modal__title {
+    text-align: center;
+  }
+
+  .modal__list {
+    gap: 5px;
+  }
+
+  .modal__description {
+    text-align: justify;
+  }
+
+  .modal__button-close {
+    top: -52px;
+    right: -30px;
+  }
+}
+
+/* Modal END */

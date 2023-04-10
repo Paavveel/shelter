@@ -97,8 +97,8 @@ function renderPets() {
   const pageArr = petsArray.slice(start, end);
 
   for (let i = 0; i < pageArr.length; i++) {
-    const { name, img } = pageArr[i];
-    pets += `<div class="pet-card">
+    const { id, name, img } = pageArr[i];
+    pets += `<div class="pet-card" data-pet-id="${id}" tabindex="0">
             <img class="pet-card__img" width="270" height="270" src="${img}" alt=${name}">
             <p class="pet-card__name">${name}</p>
             <button class="button button_secondary">Learn more</button>

@@ -115,8 +115,8 @@ function renderPets(arr, container) {
   const tabIndex = container.matches('.slider__item-active') ? 0 : -1;
 
   for (let i = 0; i < petsCount; i++) {
-    const { name, img } = arr[i];
-    pets += `<div class="pet-card">
+    const { id, name, img } = arr[i];
+    pets += `<div class="pet-card" data-pet-id=${id} tabindex="${tabIndex}">
                   <img class="pet-card__img" width="270" height="270" src="${img}"
                     alt="${name}">
                   <p class="pet-card__name">${name}</p>
